@@ -22,7 +22,7 @@ The architecture includes:
 - CloudWatch Log Group
 
 ### Architecture Diagram
-![VPC Flow Logs Architecture](./images/vpc-flowlogs-architecture.png)
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image0.png)
 
 ---
 
@@ -54,28 +54,36 @@ The architecture includes:
 
 ### 1️⃣ Create VPC
 - Created a VPC with CIDR block `12.0.0.0/24`
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image1.png)
 
 ### 2️⃣ Create Subnets
 - Public Subnet: `12.0.1.0/24`
 - Private Subnet: `12.0.2.0/24`
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image2.png)
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image3.png)
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image4.png)
 
 ### 3️⃣ Configure Internet Gateway
 - Attached Internet Gateway to VPC
 - Updated route table for public subnet
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image5.png)
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image6.png)
 
 ### 4️⃣ Configure NAT Gateway
 - Created NAT Gateway in public subnet
 - Updated private subnet route table for internet access
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image7.png)
 
 ### 5️⃣ Launch EC2 Instances
 - EC2 instance in public subnet
 - EC2 instance in private subnet
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image10.png)
 
 ### 6️⃣ Enable VPC Flow Logs
 - Enabled flow logs at VPC level
 - Selected CloudWatch Log Group as destination
 - Configured IAM role for logging permissions
-
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image8.png)
 ---
 
 ## 📊 Flow Log Details
@@ -107,7 +115,7 @@ VPC Flow Logs capture:
 
 ## 📷 Screenshots
 
-Screenshots of configuration and logs are available in the `/images` folder.
+Screenshots of the configuration and logs are available in the `image`.
 
 ---
 
