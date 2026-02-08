@@ -17,6 +17,7 @@ The architecture includes:
 - Internet Gateway
 - NAT Gateway
 - Route Tables
+- IAM Role and Policy
 - EC2 Instances
 - VPC Flow Logs
 - CloudWatch Log Group
@@ -79,11 +80,17 @@ The architecture includes:
 - EC2 instance in private subnet
 ![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image10.png)
 
+### 2️⃣ Create IAM Role and Policy
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image9.png)
+![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image11.png)
+
 ### 6️⃣ Enable VPC Flow Logs
 - Enabled flow logs at VPC level
 - Selected CloudWatch Log Group as destination
 - Configured IAM role for logging permissions
 ![VPC Flow Logs Architecture](https://github.com/vipul132/AWS_VPC_FLOW_LOG_PROJECT/blob/master/image8.png)
+
+
 ---
 
 ## 📊 Flow Log Details
