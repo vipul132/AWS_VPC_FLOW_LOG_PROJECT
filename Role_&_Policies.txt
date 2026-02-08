@@ -1,32 +1,34 @@
 
-#VPC flow logs Role
+#This policy allows the VPC Flow Logs service to assume the IAM role.
 {
-"Version":"2012-10-17",
-"Statement":[
-{
-"Effect":"Allow",
-"Principal":{
-"Service":"vpc-flow-logs.amazonaws.com"
-},
-"Action":"sts:AssumeRole"
-}
-]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "vpc-flow-logs.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
 }
 
-#VPC flow logs Policy
+
+#This policy allows VPC Flow Logs to send logs to CloudWatch.
 {
-Version = "2012-10-17"
-Statement = [
-{
-Effect = "Allow"
-Action = [
-"logs:CreateLogGroup",
-"logs:CreateLogStream",
-"logs:PutLogEvents",
-"logs:DescribeLogGroups",
-"logs:DescribeLogStreams",
-]
-Resource = "*"
-},
-]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
+
